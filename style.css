@@ -6,8 +6,10 @@ body {
 
 .subtitle {
   border: 2px solid black;
-  padding: 20px;
-  margin: 275px;
+  padding: auto;
+  margin: auto;
+  width: 300px;
+  
 }
 
 
@@ -16,4 +18,5 @@ body {
 .card {
   background-color: rgb(0, 208, 173);
     padding: 20px;}
-#bok { font-size: 100px; color:bisque}
+#bach { font-size: 100px; color:bisque}
+
