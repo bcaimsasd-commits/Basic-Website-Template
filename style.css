@@ -4,6 +4,11 @@ body {
   font-family: 'Times New Roman', Times, serif, serif;
 }
 
+.subtitle {
+  border: 2px solid black;
+}
+
+
 .subtitle { color: #00ff66 }
 #page-title { font-size: 48px; color: rgb(60, 11, 11); }
 .card {
