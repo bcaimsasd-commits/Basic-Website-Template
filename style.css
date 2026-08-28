@@ -16,8 +16,7 @@ body {
 .subtitle { color: #00ff66 }
 #page-title { font-size: 48px; color: rgb(60, 11, 11); }
 .card {
-  background-color: rgb(0, 208, 173)
-  color( rgb(100, 50, 50) rgb(188, 139, 187) blue);
+  background-color: rgb(0, 208, 173);
     padding: 20px;}
 #bach { font-size: 100px; color:bisque}
 
