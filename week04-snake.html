@@ -29,7 +29,7 @@
  
 drawBoard();
 function step() {
-  snake.x = snake.x + 20;
+  snake.x = snake.x + 1;
  
   if (snake.x > 380) {
     snake.x = 0;
@@ -39,11 +39,8 @@ function step() {
 }
 
 
-setInterval(step, 100);
+setInterval(step, 10);
 
   </script>
 </body>
 </html>
-
-
-
