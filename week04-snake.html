@@ -8,38 +8,79 @@
   <h1>Snake</h1>
   <p><a href="index.html">Back to home</a></p>
   <canvas id="gameCanvas" width="400" height="400"></canvas>
- 
+</script>
+    
   <script>
+      var apple = { x: 13, y: 10 };
     var canvas = document.getElementById("gameCanvas");
     var ctx = canvas.getContext("2d");
     var CELL = 20;
+    var snake = { x: 12, y: 10};
+
+    var dx = 20; 
+var dy = 0;  
+
  
-    var snake = { x: 8, y: 7 };
- 
-    ctx.fillStyle = "purple";
-    ctx.fillRect(0, 0, 400, 400);
- 
-    function drawBoard() {
+   function drawBoard() {
   ctx.fillStyle = "#1b1b1b";
   ctx.fillRect(0, 0, 400, 400);
  
-  ctx.fillStyle = "#3ddc84";
+  ctx.fillStyle = "#FF0";
   ctx.fillRect(snake.x, snake.y, 20, 20);
 }
  
-drawBoard();
+setInterval(step, 270);
+
 function step() {
-  snake.x = snake.x + 1;
- 
-  if (snake.x > 380) {
-    snake.x = 0;
+  snake.x = snake.x + dx;
+  snake.y = snake.y + dy;
+  drawBoard();
+  
+}
+    
+        document.addEventListener("keydown", function(event) {
+  console.log(event.key);
+});
+
+
+  drawBoard();
+    
+document.addEventListener("keydown", function(event) {
+
+        if (event.key === "ArrowUp") {
+    dx = 0;
+    dy = -20;
   }
+  if (event.key === "ArrowDown") {
+    dx = 0;
+    dy = 20;
+  }
+  
+  if (event.key === "ArrowRight") {
+    dx = 20;
+    dy = 0;
+  }
+  
+  if (event.key === "ArrowLeft") {
+    dx = -20;
+    dy = 0;
+  }
+});
+
+function step() {
+  snake.x = snake.x + dx;
+  snake.y = snake.y + dy;
+ 
+  if (snake.x > 380) { snake.x = 0; }
+  if (snake.x < 0) { snake.x = 380; }
+  if (snake.y > 380) { snake.y = 0; }
+  if (snake.y < 0) { snake.y = 380; }
  
   drawBoard();
+
+
+
 }
-
-
-setInterval(step, 10);
 
   </script>
 </body>
